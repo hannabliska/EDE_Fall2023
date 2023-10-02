@@ -34,6 +34,11 @@ Suppose you want just the column speed. How would you access that data?
 
 ```{r}
 cars$speed
+
+mtcars$cyl
+
+cylinders <- mtcars$cyl
+cylinders
 ```
 
 How would you store it on another object?
@@ -109,10 +114,10 @@ ncol(df)
 nrow(df)  
 length(df)  #same as ncol
 summary(df)
-head(df) #show the first 6 rows of df
+head(df,2) #show the first 6 rows of df
 
 #If you know the number of the column you want you can refer to that to access column
-df[,1]
+df[c(1,2,3),2]
 
 #you could also use this notation to delete columns
 df <- df[,-2]
